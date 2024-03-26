@@ -2,6 +2,7 @@ import { currentUser } from "@clerk/nextjs"
 import { redirect } from "next/navigation"
 
 import { fetchUser } from "@/lib/actions/user.actions"
+import AccountProfile from "@/components/forms/AccountProfile";
 
 async function page() {
 
@@ -27,7 +28,7 @@ async function page() {
         Complete your profile now, to use -- CREATE NAME -- 
       </p>
       <section>
-         Acount profile
+         <AccountProfile user={userData} btnTitle="Continue" />
       </section>
     </main>
   )
