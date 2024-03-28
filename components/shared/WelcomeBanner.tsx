@@ -2,6 +2,7 @@ import Image from "next/image";
 
 import { AspectRatio } from "../ui/aspect-ratio";
 import { Button } from "../ui/button";
+import Link from "next/link";
 
 const WelcomeBanner = () => {
   return (
@@ -24,7 +25,7 @@ const WelcomeBanner = () => {
           from-primary
           via-foreground
           to-primary
-          opacity-50
+          opacity-20
         "
       ></div>
       </AspectRatio>
@@ -35,7 +36,7 @@ const WelcomeBanner = () => {
           top-0
           w-full
           text-center
-          mt-20
+          mt-16
           md:mt-48
           lg:mt-64
         ">
@@ -62,7 +63,9 @@ const WelcomeBanner = () => {
 
         <div className="mt-3 flex items-center justify-center gap-x-6">
           <Button>
-            Search Communities
+            <Link href='/onboarding'>
+              Login/Signup
+            </Link>
           </Button>
         </div>
       </div>
